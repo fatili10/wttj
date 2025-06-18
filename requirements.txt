@@ -1,0 +1,8 @@
+selenium
+fake_useragent
+pandas
+beautifulsoup4
+tqdm
+requests
+sqlalchemy
+psycopg2-binary
