@@ -6,3 +6,9 @@ tqdm
 requests
 sqlalchemy
 psycopg2-binary
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+pyodbc
+python-dotenv

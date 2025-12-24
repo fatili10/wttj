@@ -1,6 +1,6 @@
 # main_api.py
 from fastapi import FastAPI
-from api import jobs
+from api.routers import jobs, companies, locations, skills
 from database.db import engine
 from database import models
 
@@ -13,6 +13,11 @@ app = FastAPI(
 )
 
 app.include_router(jobs.router, prefix="/jobs", tags=["Jobs"])
+app.include_router(companies.router, prefix="/companies", tags=["Companies"])
+app.include_router(locations.router, prefix="/locations", tags=["Locations"])
+app.include_router(skills.router, prefix="/skills", tags=["Skills"])
+
+
 
 @app.get("/")
 def read_root():

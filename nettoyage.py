@@ -25,7 +25,7 @@ def nettoyage_jobs(input_path, output_path):
     print(f"Colonnes chargées : {list(df.columns)}")
 
     # Colonnes contenant potentiellement du HTML à nettoyer
-    colonnes_html = ['description', 'profile', 'company_description', 'benefits']
+    colonnes_html = ['recruitment_process', 'profile', 'company_description', 'benefits']
 
     # Nettoyage HTML sur les colonnes ciblées
     for col in colonnes_html:
@@ -47,8 +47,7 @@ def nettoyage_jobs(input_path, output_path):
     # Colonnes numériques où remplacer NaN par None (valeur NULL en base)
     colonnes_numeriques = [
         'salary_min', 'salary_max',
-        'contract_duration_min', 'contract_duration_max',
-        'office_remote_ratio'
+        'contract_duration_min', 'contract_duration_max'
     ]
     for col in colonnes_numeriques:
         if col in df.columns:

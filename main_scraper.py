@@ -23,6 +23,7 @@
 #     main()
 from config import COUNTRY, COUNTRY_CODE, KEYWORDS
 from scrapper.job_scraper import get_all_data
+# from scrapper.api_scraper_async import enrich_dataset
 from scrapper.api_scraper import enrich_dataset
 import pandas as pd
 import os
